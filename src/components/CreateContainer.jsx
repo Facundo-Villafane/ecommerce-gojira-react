@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import {
-	MdFastfood,
+	MdOutlineFeaturedPlayList,
 	MdCloudUpload,
 	MdDelete,
-	MdFoodBank,
 	MdAttachMoney,
 } from "react-icons/md";
 import { categories } from "../utils/data";
@@ -23,7 +22,7 @@ import { useStateValue } from "../context/StateProvider";
 
 const CreateContainer = () => {
 	const [title, setTitle] = useState("");
-	const [calories, setCalories] = useState("");
+	const [description, setDescription] = useState("");
 	const [price, setPrice] = useState("");
 	const [category, setCategory] = useState(null);
 	const [imageAsset, setImageAsset] = useState(null);
@@ -48,7 +47,7 @@ const CreateContainer = () => {
 			(error) => {
 				console.log(error);
 				setFields(true);
-				setMsg("Error while uploading : Try AGain 🙇");
+				setMsg("Error 🙇");
 				setAlertStatus("danger");
 				setTimeout(() => {
 					setFields(false);
@@ -60,7 +59,7 @@ const CreateContainer = () => {
 					setImageAsset(downloadURL);
 					setIsLoading(false);
 					setFields(true);
-					setMsg("Image uploaded successfully 😊");
+					setMsg("Imagen subida con exito 😊");
 					setAlertStatus("success");
 					setTimeout(() => {
 						setFields(false);
@@ -77,7 +76,7 @@ const CreateContainer = () => {
 			setImageAsset(null);
 			setIsLoading(false);
 			setFields(true);
-			setMsg("Image deleted successfully 😊");
+			setMsg("Imageborrada con exito 😊");
 			setAlertStatus("success");
 			setTimeout(() => {
 				setFields(false);
@@ -88,9 +87,9 @@ const CreateContainer = () => {
 	const saveDetails = () => {
 		setIsLoading(true);
 		try {
-			if (!title || !calories || !imageAsset || !price || !category) {
+			if (!title || !description || !imageAsset || !price || !category) {
 				setFields(true);
-				setMsg("Required fields can't be empty");
+				setMsg("Campos requeridos 🙇");
 				setAlertStatus("danger");
 				setTimeout(() => {
 					setFields(false);
@@ -102,7 +101,7 @@ const CreateContainer = () => {
 					title: title,
 					imageURL: imageAsset,
 					category: category,
-					calories: calories,
+					description: description,
 					qty: 1,
 					price: price,
 				};
@@ -133,7 +132,7 @@ const CreateContainer = () => {
 	const clearData = () => {
 		setTitle("");
 		setImageAsset(null);
-		setCalories("");
+		setDescription("");
 		setPrice("");
 		setCategory("Select Category");
 	};
@@ -166,13 +165,13 @@ const CreateContainer = () => {
 				)}
 
 				<div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
-					<MdFastfood className='text-xl text-gray-700' />
+					<MdOutlineFeaturedPlayList className='text-xl text-gray-700' />
 					<input
 						type='text'
 						required
 						value={title}
 						onChange={(e) => setTitle(e.target.value)}
-						placeholder='Give me a title...'
+						placeholder='Titulo del producto...'
 						className='w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor'
 					/>
 				</div>
@@ -183,7 +182,7 @@ const CreateContainer = () => {
 						className='outline-none w-full text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer'
 					>
 						<option value='other' className='bg-white'>
-							Select Category
+							Selecciona categoria
 						</option>
 						{categories &&
 							categories.map((item) => (
@@ -209,7 +208,7 @@ const CreateContainer = () => {
 										<div className='w-full h-full flex flex-col items-center justify-center gap-2'>
 											<MdCloudUpload className='text-gray-500 text-3xl hover:text-gray-700' />
 											<p className='text-gray-500 hover:text-gray-700'>
-												Click here to upload
+												Subir una imagen
 											</p>
 										</div>
 										<input
@@ -245,13 +244,13 @@ const CreateContainer = () => {
 
 				<div className='w-full flex flex-col md:flex-row items-center gap-3'>
 					<div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
-						<MdFoodBank className='text-gray-700 text-2xl' />
+						<MdOutlineFeaturedPlayList className='text-gray-700 text-2xl' />
 						<input
 							type='text'
 							required
-							value={calories}
-							onChange={(e) => setCalories(e.target.value)}
-							placeholder='Calories'
+							value={description}
+							onChange={(e) => setDescription(e.target.value)}
+							placeholder='Descripcion...'
 							className='w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor'
 						/>
 					</div>
@@ -263,7 +262,7 @@ const CreateContainer = () => {
 							required
 							value={price}
 							onChange={(e) => setPrice(e.target.value)}
-							placeholder='Price'
+							placeholder='Precio'
 							className='w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor'
 						/>
 					</div>
@@ -275,7 +274,7 @@ const CreateContainer = () => {
 						className='ml-0 md:ml-auto w-full md:w-auto border-none outline-none bg-emerald-500 px-12 py-2 rounded-lg text-lg text-white font-semibold'
 						onClick={saveDetails}
 					>
-						Save
+						Guardar
 					</button>
 				</div>
 			</div>
