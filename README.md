@@ -46,13 +46,13 @@ El usuario registrado como administrador puede agregar productos que se suben a 
 ## Capturas
 
 Home
-![image00](https://files.000webhost.com/handler.php?action=download?action=download&path=%2Fpublic_html%2F01.png)
+![image00](https://gojira3d.000webhostapp.com/images/01.png)
 
 Subir productos (solo admin)
-![image00](https://files.000webhost.com/handler.php?action=download?action=download&path=%2Fpublic_html%2F07.png)
+![image00](https://gojira3d.000webhostapp.com/images/07.png)
 
 Carrito
-![image00](https://files.000webhost.com/handler.php?action=download?action=download&path=%2Fpublic_html%2F04.png)
+![image00](https://gojira3d.000webhostapp.com/images/04.png)
 
 
 
