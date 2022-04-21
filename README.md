@@ -1,70 +1,66 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Tienda virtual creada durante la cursada de React JS en CoderHouse
 
-In the project directory, you can run:
+Este es un Ecommerce, en el cual se simula una tienda de objetos impresos en 3D.
 
-### `yarn start`
+La navegación incluye: 
++ Home con productos
++ Sección de categorías
++ Menú de carrito
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Tecnologías y librerías:
++ Interfaz realizada con ReactJS - Create React App
++ Estilos con Tailwind
++ Ruteo con React Router Dom
++ Base de datos con Firebase
++ Animaciones con Motion Framer
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Despues de clonar el repositorio, ejecutar "npm install" para instalar las dependencias
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ejecutar Proyecto
 
-### `yarn eject`
+    1. Ejecute "npm start" en su proyecto para iniciar.
+    2. No son necesarias credenciales para ejecutarlo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Detalles del proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+El usuario puede agregar un producto al carrito desde la home o desde el menu de carrito
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+La barra de navegación muestra la cantidad de items que el usuario ha agregado.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para que el usuario pueda realizar la compra debe estar logueado.
 
-## Learn More
+Las categorías de la sección categorias se cargan dinamicamente de la base de datos (firestore)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+El usuario registrado como administrador puede agregar productos que se suben a la base de datos de firestore.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Capturas
 
-### Analyzing the Bundle Size
+Home
+![image00](https://files.000webhost.com/handler.php?action=download?action=download&path=%2Fpublic_html%2F01.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Subir productos (solo admin)
+![image00](https://files.000webhost.com/handler.php?action=download?action=download&path=%2Fpublic_html%2F07.png)
 
-### Making a Progressive Web App
+Carrito
+![image00](https://files.000webhost.com/handler.php?action=download?action=download&path=%2Fpublic_html%2F04.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact Gi
